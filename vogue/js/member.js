@@ -112,10 +112,14 @@ $(() => {
                         success:function(res){ // res - 결과값리턴
                             console.log(res);
                             if(res==="ok"){
-                                $("#mid").siblings(".msg").text("멋진 아이디네요!").addClass("on");
+                                $("#mid").siblings(".msg")
+                                .text("멋진 아이디네요!")
+                                .addClass("on");
                             } /// ok /////
                             else{ /// 아이디 중복시
-                                $("#mid").siblings(".msg").text("사용중인ID입니다!").removeClass("on");
+                                $("#mid").siblings(".msg")
+                                .text("사용중인ID입니다!")
+                                .removeClass("on");
 
                                 // 불통과처리 
                                 //-> pass변수사용이유로 
