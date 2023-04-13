@@ -107,9 +107,12 @@ $(() => {
                         // 다만 현재문서와의 동기처리를 하려면
                         // 비동기옵션값을 false로 해야함
                         // pass전역변수를 사용하기 위해 필요!
+                        // 최종 트리거blur발생시 순서대로
+                        // 처리할때 동기화해야하기때문!
                         async:false,
                         // 6.성공처리
-                        success:function(res){ // res - 결과값리턴
+                        success:function(res){ 
+                            // res - 결과값리턴
                             console.log(res);
                             if(res==="ok"){
                                 $("#mid").siblings(".msg")
@@ -125,6 +128,8 @@ $(() => {
                                 //-> pass변수사용이유로 
                                 // async:fasle 옵션사용함!
                                 pass = false;
+
+                                console.log("내부pass:",pass);
                             } //// else //////
                         }, //// success ///
                         // 7.실패처리
