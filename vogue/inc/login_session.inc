@@ -27,10 +27,12 @@ session_start();
           $("#loginMsg").text(msg);
 
           // 2. 로그인 버튼을 로그아웃 버튼으로 변경하기
-          // 대상: .smsub li:eq(1) a
-          $(".smsub li").eq(1).find("a").text("로그아웃")
+          // 대상: .sns a:eq(4) span
+          $(".sns a").eq(4).find("span").text("로그아웃")
+          // 툴팁변경하기 -> a요소로 다시 올라감
+          .parent().attr("title","로그아웃")
 
-          // 3. 로그아웃 클릭시 로그아웃하기
+          // 3. a요소에 로그아웃 클릭시 로그아웃하기
           .click(function(){
 
               // 비동기통신으로 로그아웃 처리 페이지호출!
@@ -38,7 +40,7 @@ session_start();
               // $.post(호출페이지, 전달변수셋팅, 콜백함수)
               $.post(
                 // 1. 호출페이지
-                  "process/logOut.php",
+                  "./process/logOut.php",
                   // 2. 전달변수셋팅
                   {},
                   // 3. 콜백함수
@@ -72,15 +74,21 @@ session_start();
           });///// click /////////////////////
 
           // 4. 회원가입 버튼 제거하기
-          // 대상: .smsub li:last-child
-          $(".smsub li").last().remove();
+          // 대상: .sns a:eq(5)
+          $(".sns a").eq(5).remove();
           
         // 5. auth 권한 값이 "A"일 경우 
         //    "관리자" 메뉴 생성하여 추가하기
         if (auth === "A" || auth === "S") {
-            $(".smsub")
+            $(".sns")
                 .append(
-                    "<li><a href='admin/index.php'>관리자</a></li>");
+                  `
+                  <a href="#" class="fi fi-user-secret" title="관리자" style="color:red">
+                      <span class="ir"> 관리자 </span>
+                  </a>                  
+                  `
+                    
+                );
         } /////////// if /////////////////
 
 
