@@ -18,12 +18,15 @@ $(()=>{ ///////// jQB /////////////////
         e.preventDefault();
 
         // 공백데이터 처리함수 //
-        const groSpace = val => val.replace("/\s/g","");
+        // const groSpace = val => val.replace("/\s/g","");
+
+        console.log("아이디:",mid.val().trim());
+        console.log("비번:",mid.val().trim());
 
         // 유효성 검사하기
         // 아이디 비번 중 하나라도 비어 있으면 불통과!
-        if(groSpace(mid.val())==="" || groSpace(mpw.val())===""){
-            alert("모두 넣으시오~~~~!");
+        if(mid.val().trim()==="" || mpw.val().trim()===""){
+            alert("아이디,비밀번호 모두 입력하세요!");
             // 초기화! + 아이디에 포커스
             mid.val("").focus();
             mpw.val("");
