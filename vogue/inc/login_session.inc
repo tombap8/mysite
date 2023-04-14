@@ -33,7 +33,10 @@ session_start();
           .parent().attr("title","로그아웃")
 
           // 3. a요소에 로그아웃 클릭시 로그아웃하기
-          .click(function(){
+          .click(function(e){
+
+              // 기본이동막기
+              e.preventDefault();
 
               // 비동기통신으로 로그아웃 처리 페이지호출!
               // Ajax - $.post() 로 처리!

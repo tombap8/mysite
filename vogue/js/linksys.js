@@ -84,7 +84,11 @@ $(() => {
         console.log(url);
 
         // 3. 페이지 이동하기
-        if (atxt === "로그인" || atxt === "회원가입" || atxt === "갤러리") {
+        if (atxt === "로그인" || 
+        atxt === "로그아웃" || 
+        atxt === "관리자" || 
+        atxt === "회원가입" || 
+        atxt === "갤러리") {
             location.href = url + ".php";
         } //////////// if /////////////
         else {
