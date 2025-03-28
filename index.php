@@ -6,7 +6,7 @@
     <title>php 첫페이지</title>
 </head>
 <body>
-    <h1>나의 php 첫 페이지야!</h1>
+    <h1>나의 php 첫 페이지야!ㅎㅎㅎ</h1>
     
 </body>
 </html>
