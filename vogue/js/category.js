@@ -1,7 +1,7 @@
 // 보그 PJ 카테고리 페이지 JS - category.js
 
-// 카테고리 데이터 불러오기 : 어서써 타입 제이슨
-import catData from './data/category_data.json' assert {type:'json'};
+// 카테고리 데이터 불러오기 : 함께하는 것은 타입 제이슨
+import catData from './data/category_data.json' with {type:'json'};
 
 ///////////////////////////////////////////
 // 카테고리 페이지 기능구현하기 /////////////
