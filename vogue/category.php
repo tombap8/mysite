@@ -34,7 +34,7 @@
   </head>
   <body>
     <!-- 로그인 처리 인클루드파일 호출 -->
-    <!-- <?php include "inc/login_session.inc" ?> -->
+    <?php include "inc/login_session_old.php" ?>
     
     <!-- 1.상단영역 -->
     <?php include "inc/top_area.inc" ?>

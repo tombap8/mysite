@@ -6,7 +6,7 @@
 let login_msg, login_auth;
 function loginSet(msg, auth) {
   // msg-메시지, auto-권한
-  if(!msg) return;
+  if (!msg) return;
 
   // 콘솔창에 전달값을 찍어봄!
   console.log(msg + "/" + auth);
@@ -80,8 +80,6 @@ function loginSet(msg, auth) {
       .click(() => (location.href = "./admin/"));
   } /////////// if /////////////////
 } ////////// loginSet 함수 /////////////////
-
-
 
 /* 
   main.js파일에 삽입
